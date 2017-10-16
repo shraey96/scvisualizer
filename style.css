@@ -1,0 +1,132 @@
+body, html { margin: 0px;}
+
+body
+{
+    background-color: black;
+}
+
+
+
+
+#main-content
+{   top: 30px;
+    float: left;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 65%;
+    width: 90%;
+    margin: auto;
+    opacity: 0;
+    -webkit-transition: opacity 0.8s ease-in-out;
+    -moz-transition: opacity 0.8s ease-in-out;
+    -ms-transition: opacity 0.8s ease-in-out;
+    -o-transition: opacity 0.8s ease-in-out;
+    transition: opacity 0.8s ease-in-out;
+}
+
+#audio-test-div
+{
+   position:absolute;                  
+   bottom:0;                           
+   left:0;
+    width: 100%;
+}
+
+#main-content:hover
+{
+    opacity: 1;
+}
+
+.tabs
+{
+    background-color: limegreen;
+    border: 1px solid black;
+}
+
+
+#results
+{
+    overflow-y: auto;
+    height: 63% ;
+}
+
+
+audio
+{
+    margin-top: -60px;
+    height: 100px;
+    width: 100%;
+}
+
+
+.retrievedTracks
+{
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+.retrievedTracks:hover
+{
+    background-color: dodgerblue;
+}
+
+.title
+{
+    cursor: pointer;
+}
+
+#visualizer-bars
+{
+    position: fixed; 
+    width:100%;
+    bottom:0;
+}
+
+
+.current-Track
+{
+    height: 130px;
+    width: 250px;
+    border: 1px solid black;
+    float: left;
+    color: white;
+}
+
+
+.current-Track img
+{
+    height: 30px;
+    width: 30px;
+}
+
+.current-Track img:hover
+{
+    padding: 5px 5px 5px 5px;
+    height: 40px;
+    width: 40px;
+}
+
+
+#currentTrackIMG
+{
+    height: 90px;
+    width: 90px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+#currentTrackMarquee
+{
+    margin-top: -18px;
+    width: 110px;
+    
+}
+
+.controls
+{   margin-top: 20px;
+    margin-right: 5px;
+}

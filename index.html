@@ -1,0 +1,173 @@
+<html>
+<head>
+ 
+  <title>SoundCloud Visualizer, Bitches ;D</title>
+  <script src="jquery-3.1.1.js"></script>
+  <script src="//connect.soundcloud.com/sdk.js"></script>
+ 
+    
+    
+    
+    
+     <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.0/js/materialize.min.js"></script>
+          
+    
+  <link rel="stylesheet" type="text/css" href="style.css">
+    
+    
+</head>
+<body>
+    
+
+
+  <nav>
+    <div class="nav-wrapper">
+        
+        
+        <img src="322-Audio_music_spectrum_visualizer-512.png" height="50px" width="50px" style="margin-left: 34%; margin-top: 3px;">
+      <a href="#" class="brand-logo center">Soundcloud Visualizer</a>
+     
+        
+ 
+        
+        
+      </div>
+  </nav>
+    
+    
+    
+ 
+    
+    <div class="current-Track">
+        <img id="currentTrackIMG">
+        <div class="controls" style="float: right">
+        <img src="previous.png"><img src="play.png"><img src="next.png">
+            <p style="margin-right: 20px;">Now playing:</p>
+             <marquee id="currentTrackMarquee"></marquee>
+        </div>
+        
+       
+  
+    </div>
+    
+   
+    
+    
+   
+    
+    
+    <div  class="container">
+        
+          <div id="main-content">
+          
+              <div class="row">
+                  
+                  
+                        <div class="col s12">
+                        
+                            <ul class="tabs" >
+        <li class="tab col s4"><a href="#test1" style="color: white;">Likes</a></li>
+        <li class="tab col s4"><a href="#test2" style="color: white;">Playlist</a></li>
+        <li class="tab col s4"><a class="active" href="#test3" style="color: white;">Search</a></li>
+        
+                            </ul>
+                  
+                  </div>
+                  
+               
+    <div id="test1" class="col s12" style="color:white">Coming soon...</div>
+    <div id="test2" class="col s12" style="color:white">Coming soon...</div>
+    
+    <div id="test3" class="col s12">
+    
+     <input type="text" id="search" placeholder="Search track or artist..." style="margin-top:10px; width:85%; margin-left: 5px; color:white"> 
+     <a class="waves-effect waves-light btn" onclick="searchSC()">Search</a>
+    
+                
+                <div id="results">
+        
+                 
+                
+                </div>    
+
+        <div id="audio-test-div">
+        <audio id="audio-test" controls onended="playTrack()"></audio>
+        </div>
+        
+    
+        </div>
+              </div>
+        </div>
+    </div>
+    
+
+    
+    
+    
+    
+         
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4><u>Settings</u></h4>
+    
+
+     <div class="switch">
+         
+         
+          <p>Random colors for visualizer:</p>
+    <label>
+      Off
+      <input type="checkbox" id="switchRGB">
+      <span class="lever"></span>
+      On
+    </label>
+           
+           <p>Bars Visualizer: </p>
+    <label>
+      Off 
+      <input type="checkbox" id="switchVisualizer1" checked>
+      <span class="lever"></span>
+      On
+    </label>
+         
+            <p>WaveForm Visualizer: </p>
+    <label>
+      Off
+      <input type="checkbox" id="switchVisualizer2">
+      <span class="lever"></span>
+      On
+    </label>
+         
+         
+          
+  </div>
+        
+        
+        
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+    
+<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Settings</a>
+    
+    
+
+    
+    
+   
+<canvas id="visualizer-waves"  style="border:1px solid black; width: 100%; height: 150px; margin-top: -200px;"></canvas> 
+<canvas id="visualizer-bars"  style="border:1px solid black; width: 100%; height:140px;"></canvas>  
+       
+      <script src="script1.js"></script> 
+</body>
+    
+    
+</html>
